@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		.h{
+			border: 50 50 50 50;
+			font-family:verdana;
+			font-size: 300%
+			padding-left: 11em;
+			text-align: center;
+		}
+		body{
+			background-color:pink;
+			color: blue;
+			text-align:center;
+
+		}
+		p{
+			font-size:200%;
+			animation-duration: 4s;
+			animation-name: swing;
+
+		}
+		ul.navbar {
+		    position: absolute;
+		    top: 8em;
+		    left: 1em;
+		    width: 9em;
+		    font-size: 1.3em; 
+		}
+		.nav {
+			text-align: center;
+  			display:inline;
+  			font-size: 1.6em;	 
+		}
+		@keyframes swing {
+			0% {transform: rotate(0deg);}
+			100% {transform: rotate(-360  deg);}
+
+		}
+
+		.btn{ background-color: yellow;
+			font-size: 1.6em;
+			transition: all 0.4s;
+		}
+		.btn:hover{
+			background-color: red;
+			color: #e3e3e3;
+		}
+	</style>
+	<title>My First WP</title>
+</head>
+<body>
+	<h1 class="h">Refreshment Area</h1>
+	<p>Menu</p>
+	<ul class="nav">
+		<li>coffee</li>
+		<li>tea</li>
+		<li>milk</li>
+		<li>cool drinks</li>
+		<li>fresh juice</li>
+	</ul>
+	<ul class="navbar">
+  		<li><a href="index.html">Home page</a>
+		<li><a href="musings.html">categories</a>
+		<li><a href="town.html">About</a>
+		<li><a href="links.html">Links</a>
+	</ul>
+
+	<a href="#" class="btn">Click Here to order</a>
+	
+</body>
+</html>
