@@ -2,59 +2,41 @@
   <data>
     <!-- explicit list view definition -->
 
-    <record model="ir.ui.view" id="showroom.list">
-      <field name="name">showroom list</field>
+    <record model="ir.ui.view" id="showroom_models">
+      <field name="name">showroom showroom</field>
       <field name="model">showroom.showroom</field>
       <field name="arch" type="xml">
         <tree>
           <field name="Bike_Name"/>
-          <field name="Cost"/>
-          <field name="Customer_Name"/>
+          <field name="brand"/>
+          <field name="model_name"/>
+          <field name="variant_name"/>
         </tree>
       </field>
     </record>
 
 
-    <!-- actions opening views on models -->
-
     <record model="ir.actions.act_window" id="showroom.action_window">
-      <field name="name">showroom window</field>
+      <field name="name">showroom</field>
       <field name="res_model">showroom.showroom</field>
       <field name="view_mode">tree,form</field>
     </record>
 
 
-    <!-- server action to the one above -->
 
-    <record model="ir.actions.server" id="showroom.action_server">
-      <field name="name">showroom server</field>
-      <field name="model_id" ref="model_showroom_showroom"/>
-      <field name="state">code</field>
-      <field name="code">
-        action = {
-          "type": "ir.actions.act_window",
-          "view_mode": "tree,form",
-          "res_model": model._name,
-        }
-      </field>
-    </record>
-
-
-    <!-- Top menu item -->
-
-    <menuitem name="showroom" id="showroom.menu_root"/>
-
+    <menuitem name="showroom" id="showroom.menu_root"  action="showroom.action_window" sequence="0"/>
+    <!-- <menuitem name="Brand" id="showroom_brand" parent="showroom.menu_root" action="action_window" sequence="1"/> -->
+    <!-- <menuitem name="model" id="showroom_model" parent="showroom.menu_root" action="action_model" sequence="2"/>  -->
+    <!-- <menuitem name="variant" id="showroom_variant" parent="showroom.menu_root" action="action_variant" sequence="3"/> -->
+    <!-- <menuitem name="Brand" id="showroom_brand" parent="showroom.menu_root" action="action_window" sequence="1"/> -->
+    <!-- <menuitem name="model" id="showroom_model" parent="showroom.menu_root" action="action_model" sequence="2"/>  -->
     <!-- menu categories -->
+    <!-- <menuitem name="Model" id="showroom.model" parent="showroom.menu_root" action="showroom.action_window"/> 
 
-    <menuitem name="Menu 1" id="showroom.menu_1" parent="showroom.menu_root"/>
-    <menuitem name="Menu 2" id="showroom.menu_2" parent="showroom.menu_root"/>
+    <menuitem name="Variant" id="showroom.variant" parent="showroom.menu_root" action="showroom.action_window"/> 
 
-    <!-- actions -->
-
-    <menuitem name="List" id="showroom.menu_1_list" parent="showroom.menu_1"
-              action="showroom.action_window"/>
-    <menuitem name="Server to list" id="showroom" parent="showroom.menu_2"
-              action="showroom.action_server"/>
+     actions -->
 
   </data>
 </odoo>
+

@@ -1,0 +1,23 @@
+ <odoo>
+  <data>
+  
+
+    <record model="ir.ui.view" id="showroom_model">
+      <field name="name">showroom model</field>
+      <field name="model">showroom.model</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_model">
+      <field name="name">model</field>
+      <field name="res_model">showroom.model</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="model" id="showroom_model" parent="showroom.menu_root" action="action_model" sequence="2"/> 
+  </data>
+</odoo>

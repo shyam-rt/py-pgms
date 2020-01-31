@@ -1,0 +1,23 @@
+<odoo>
+  <data>
+    
+    <record model="ir.ui.view" id="showroom_variant">
+      <field name="name">showroom variant</field>
+      <field name="model">showroom.variant</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_variant">
+      <field name="name">variant</field>
+      <field name="res_model">showroom.variant</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="variant" id="showroom_variant" parent="showroom.menu_root" action="action_variant" sequence="3"/> 
+  </data>
+</odoo>  

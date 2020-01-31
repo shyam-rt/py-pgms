@@ -1,2 +1,5 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_showroom_showroom,showroom.showroom,model_showroom_showroom,base.group_user,1,1,1,1
+access_showroom_model,showroom.model,model_showroom_model,base.group_user,1,1,1,1
+access_showroom_variant,showroom.variant,model_showroom_variant,base.group_user,1,1,1,1
+access_showroom_brand,showroom.brand,model_showroom_brand,base.group_user,1,1,1,1
